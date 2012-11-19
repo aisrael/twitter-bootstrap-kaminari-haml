@@ -16,15 +16,19 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
+    ".gitignore",
+    "Gemfile",
+    "Gemfile.lock",
     "README.md",
-    "VERSION",
+    "Rakefile",
     "app/views/kaminari/_first_page.html.haml",
     "app/views/kaminari/_gap.html.haml",
     "app/views/kaminari/_last_page.html.haml",
     "app/views/kaminari/_next_page.html.haml",
     "app/views/kaminari/_page.html.haml",
     "app/views/kaminari/_paginator.html.haml",
-    "app/views/kaminari/_prev_page.html.haml"
+    "app/views/kaminari/_prev_page.html.haml",
+    "twitter-bootstrap-kaminari-haml.gemspec"
   ]
   s.homepage = "https://github.com/AlistairIsrael/twitter-bootstrap-kaminari-haml"
   s.require_paths = ["lib"]
@@ -35,6 +39,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<rails>, ["~> 3.2"])
       s.add_development_dependency(%q<rspec>, ["~> 2.11"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0"])
@@ -42,6 +47,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
     else
+      s.add_dependency(%q<rails>, ["~> 3.2"])
       s.add_dependency(%q<rspec>, ["~> 2.11"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.0"])
@@ -50,6 +56,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<simplecov>, [">= 0"])
     end
   else
+    s.add_dependency(%q<rails>, ["~> 3.2"])
     s.add_dependency(%q<rspec>, ["~> 2.11"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.0"])

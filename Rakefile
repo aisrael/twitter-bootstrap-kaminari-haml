@@ -11,11 +11,14 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
+require 'twitter_bootstrap_kaminari_haml'
 
+require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name        = 'twitter-bootstrap-kaminari-haml'
+  gem.version     = TwitterBootstrapKaminariHaml::VERSION
   gem.authors     = ['Alistair A. Israel']
   gem.email       = ['aisrael@gmail.com']
   gem.homepage    = 'https://github.com/AlistairIsrael/twitter-bootstrap-kaminari-haml'
