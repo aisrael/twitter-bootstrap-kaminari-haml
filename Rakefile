@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
-require 'twitter_bootstrap_kaminari_haml'
+require 'twitter-bootstrap-kaminari-haml'
 
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
