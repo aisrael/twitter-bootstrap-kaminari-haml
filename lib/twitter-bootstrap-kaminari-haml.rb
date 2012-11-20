@@ -1,10 +1,6 @@
-puts "Loading #{__FILE__}"
-
-require 'active_support'
 require 'rails/engine'
 
 module TwitterBootstrapKaminariHaml
-  extend ActiveSupport::Autoload
 
   VERSION = '0.1.0'
 
