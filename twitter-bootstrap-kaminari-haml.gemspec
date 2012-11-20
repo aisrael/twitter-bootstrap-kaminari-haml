@@ -9,18 +9,18 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alistair A. Israel"]
-  s.date = "2012-11-19"
+  s.date = "2012-11-20"
   s.description = "Provides modified copies of kaminari's views that you can drop in to your ruby application to work with Twitter bootstrap."
   s.email = ["aisrael@gmail.com"]
   s.extra_rdoc_files = [
     "README.md"
   ]
   s.files = [
-    ".gitignore",
     "Gemfile",
     "Gemfile.lock",
     "README.md",
     "Rakefile",
+    "app/helpers/tatami_helper.rb",
     "app/views/kaminari/_first_page.html.haml",
     "app/views/kaminari/_gap.html.haml",
     "app/views/kaminari/_last_page.html.haml",
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "app/views/kaminari/_page.html.haml",
     "app/views/kaminari/_paginator.html.haml",
     "app/views/kaminari/_prev_page.html.haml",
+    "lib/twitter_bootstrap_kaminari_haml.rb",
     "twitter-bootstrap-kaminari-haml.gemspec"
   ]
   s.homepage = "https://github.com/AlistairIsrael/twitter-bootstrap-kaminari-haml"

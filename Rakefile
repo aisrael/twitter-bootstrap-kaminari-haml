@@ -11,10 +11,11 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
+require 'jeweler'
+
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
 require 'twitter_bootstrap_kaminari_haml'
 
-require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name        = 'twitter-bootstrap-kaminari-haml'
@@ -25,7 +26,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary     = "Provides modified copies of kaminari's views that you can drop in to your ruby application to work with Twitter bootstrap."
   gem.description = "Provides modified copies of kaminari's views that you can drop in to your ruby application to work with Twitter bootstrap."
 
-  gem.files             = `git ls-files`.split("\n")
+  gem.files             = `git ls-files`.split("\n").reject {|s| File.basename(s) == '.gitignore' }
   gem.test_files        = `git ls-files -- {test,spec}/*`.split("\n")
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -43,23 +44,12 @@ RSpec::Core::RakeTask.new(:spec) do |test|
   test.verbose = true
 end
 
-# TODO Use simplecov
-# require 'rcov/rcovtask'
-# Rcov::RcovTask.new do |test|
-  # test.libs << 'test'
-  # test.pattern = 'test/**/test_*.rb'
-  # test.verbose = true
-  # test.rcov_opts << '--exclude "gems/*"'
-# end
-
 task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "jazz #{version}"
+  rdoc.title = "twitter_bootstrap_kaminari_haml #{TwitterBootstrapKaminariHaml::VERSION}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
