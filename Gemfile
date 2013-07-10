@@ -1,19 +1,21 @@
-source 'http://rubygems.org'
-# Add dependencies required to use your gem here.
-# Example:
-#   gem 'activesupport', '>= 2.3.5'
-gem 'rails', '~> 3.2'
+source "http://rubygems.org"
 
-# Add dependencies to develop your gem here.
+# Use Ruby 2.0 cause we like to live on the edge!
+ruby '2.0.0'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.0'
+
+# Add dependencies to develop your gem here
 # Include everything needed to run rake, tests, features, etc.
 group :development do
-  gem 'rspec', '~> 2.11'
+  gem 'bundler', '~> 1.3'
   gem 'rdoc', '~> 3.12'
-  gem 'bundler', '~> 1.0'
-  gem 'jeweler', '~> 1.8.4'
+  gem 'jeweler', '~> 1.8.6'
 
-  # rcov only works with Ruby 1.8
+  # Use rspec for tests
+  gem 'rspec', '~> 2.14'
+
   gem 'rcov', '>= 0', :platforms => :mri_18
-  # for Ruby 1.9, use simplecov
   gem 'simplecov', :platforms => :mri_19
 end
