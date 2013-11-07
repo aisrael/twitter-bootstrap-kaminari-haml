@@ -1,10 +1,12 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
 # Use Ruby 2.0 cause we like to live on the edge!
 ruby '2.0.0'
 
+gem 'json', '1.8.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.0.0'
 
 # Add dependencies to develop your gem here
 # Include everything needed to run rake, tests, features, etc.
